@@ -10,7 +10,7 @@ export default function Home() {
       <ContactSection />
 
       <footer className="py-8 bg-black text-center text-stone-accent/50 text-xs uppercase tracking-widest border-t border-white/5">
-        &copy; {new Date().getFullYear()} Harmandaoğlu Maden İnşaat Tarım ve Turizm Ltd. Şti.
+        &copy; {new Date().getFullYear()} Harmandaoğlu AŞ
       </footer>
     </main>
   );

@@ -8,13 +8,10 @@ export default function Hero() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--color-industrial-gray)_0%,var(--color-industrial-black)_80%)] opacity-40"></div>
 
             <div className="z-10 text-center px-4">
-                <h2 className="text-gold-muted tracking-[0.3em] text-sm md:text-base lg:text-lg uppercase font-bold mb-6 border-b border-gold-muted/30 pb-2 inline-block">
-                    Maden • İnşaat • Tarım • Turizm
-                </h2>
                 <h1 className="text-5xl md:text-7xl lg:text-9xl font-black uppercase tracking-tighter text-glow mb-6 text-white leading-none">
-                    HARMANDA<span className="text-stone-light">OĞLU</span>
+                    HARMANDAOĞLU <span className="text-stone-light">AŞ</span>
                 </h1>
-                <p className="text-stone-accent text-lg md:text-2xl max-w-2xl mx-auto font-light tracking-widest uppercase">
+                <p className="text-stone-accent text-lg md:text-2xl max-w-2xl mx-auto font-light tracking-widest uppercase border-t border-gold-muted/30 pt-6 mt-2">
                     Doğal Taşın Gücü
                 </p>
             </div>

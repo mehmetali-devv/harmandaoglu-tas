@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function ProductSection() {
     const products = [
         {
@@ -10,7 +12,7 @@ export default function ProductSection() {
                 { label: "Yoğunluk", value: "2.6 g/cm³" },
                 { label: "Kullanım", value: "Dış Cephe, Zemin" }
             ],
-            gradient: "bg-gradient-to-br from-stone-500/20 to-rose-900/40 border-rose-900/30"
+            image: "/images/andezit.png"
         },
         {
             id: "bazalt",
@@ -22,7 +24,7 @@ export default function ProductSection() {
                 { label: "Yoğunluk", value: "2.9 g/cm³" },
                 { label: "Kullanım", value: "Altyapı, Peyzaj, Kaplama" }
             ],
-            gradient: "bg-gradient-to-br from-gray-800/40 to-black border-gray-700/30"
+            image: "/images/bazalt.png"
         },
         {
             id: "traverten",
@@ -34,7 +36,7 @@ export default function ProductSection() {
                 { label: "Yoğunluk", value: "2.4 g/cm³" },
                 { label: "Kullanım", value: "İç Mekan, Havuz, Cephe" }
             ],
-            gradient: "bg-gradient-to-br from-orange-100/10 to-stone-600/30 border-stone-500/30"
+            image: "/images/traverten.png"
         }
     ];
 
@@ -55,30 +57,39 @@ export default function ProductSection() {
                     {products.map((product) => (
                         <div
                             key={product.id}
-                            className={`group relative overflow-hidden border ${product.gradient} backdrop-blur-sm p-8 transition-all duration-500 hover:border-gold-muted/50 hover:bg-white/5`}
+                            className="group relative overflow-hidden border border-white/10 bg-industrial-black h-[600px] flex flex-col justify-end p-8 transition-all duration-500 hover:border-gold-muted/50"
                         >
-                            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                                <div className="w-24 h-24 rounded-full border-4 border-white/20"></div>
+                            {/* Product Image Background */}
+                            <div className="absolute inset-0 z-0">
+                                <Image
+                                    src={product.image}
+                                    alt={product.name}
+                                    fill
+                                    className="object-cover opacity-60 group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
                             </div>
 
-                            <h3 className="text-3xl font-black text-white mb-2 tracking-tight group-hover:text-gold-muted transition-colors">
-                                {product.name}
-                            </h3>
-                            <p className="text-stone-accent text-xs font-bold tracking-widest uppercase mb-6">
-                                {product.subheader}
-                            </p>
+                            <div className="relative z-10">
+                                <h3 className="text-4xl font-black text-white mb-2 tracking-tight group-hover:text-gold-muted transition-colors">
+                                    {product.name}
+                                </h3>
+                                <p className="text-stone-accent text-xs font-bold tracking-widest uppercase mb-6">
+                                    {product.subheader}
+                                </p>
 
-                            <p className="text-stone-light/80 mb-8 leading-relaxed border-l-2 border-gold-muted/20 pl-4">
-                                {product.description}
-                            </p>
+                                <p className="text-stone-light/80 mb-8 leading-relaxed border-l-2 border-gold-muted/20 pl-4 text-sm line-clamp-3 group-hover:line-clamp-none transition-all">
+                                    {product.description}
+                                </p>
 
-                            <div className="grid grid-cols-1 gap-4 border-t border-white/10 pt-6">
-                                {product.specs.map((spec, i) => (
-                                    <div key={i} className="flex justify-between items-center text-sm">
-                                        <span className="text-stone-accent uppercase tracking-wider text-xs">{spec.label}</span>
-                                        <span className="text-white font-mono font-bold">{spec.value}</span>
-                                    </div>
-                                ))}
+                                <div className="grid grid-cols-1 gap-2 border-t border-white/10 pt-4 opacity-70 group-hover:opacity-100 transition-opacity">
+                                    {product.specs.map((spec, i) => (
+                                        <div key={i} className="flex justify-between items-center text-xs">
+                                            <span className="text-stone-accent uppercase tracking-wider">{spec.label}</span>
+                                            <span className="text-white font-mono font-bold">{spec.value}</span>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     ))}

@@ -13,7 +13,7 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  title: "Harmandaoğlu AŞ | Maden - İnşaat - Tarım - Turizm",
+  title: "Harmandaoğlu AŞ",
   description: "Andezit, Bazalt ve Traverten doğal taş çözümleri. Doğal taşın gücü ve endüstriyel estetik.",
 };
 

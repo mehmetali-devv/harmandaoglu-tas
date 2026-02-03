@@ -8,27 +8,16 @@ export default function ContactSection() {
                     Doğrudan İletişim Hattı
                 </h2>
 
-                <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
+                <div className="flex justify-center items-center">
                     <a
-                        href="tel:05418506941"
-                        className="group flex flex-col items-center justify-center p-10 border border-white/10 bg-white/5 hover:border-gold-muted hover:bg-gold-muted/10 transition-all duration-300 w-full md:w-auto min-w-[300px]"
+                        href="tel:05324036446"
+                        className="group flex flex-col items-center justify-center p-12 border border-white/10 bg-white/5 hover:border-gold-muted hover:bg-gold-muted/10 transition-all duration-300 w-full md:w-auto min-w-[350px]"
                     >
-                        <Phone className="w-12 h-12 text-stone-light group-hover:text-gold-muted mb-6 transition-colors" />
-                        <span className="text-3xl md:text-4xl font-black text-white tracking-widest group-hover:text-gold-muted transition-colors">
-                            0541 850 69 41
+                        <Phone className="w-16 h-16 text-stone-light group-hover:text-gold-muted mb-8 transition-colors" />
+                        <span className="text-4xl md:text-5xl font-black text-white tracking-widest group-hover:text-gold-muted transition-colors">
+                            0532 403 64 46
                         </span>
-                        <span className="text-stone-accent text-xs mt-2 uppercase tracking-wider">Kurumsal / Satış</span>
-                    </a>
-
-                    <a
-                        href="tel:05408506941"
-                        className="group flex flex-col items-center justify-center p-10 border border-white/10 bg-white/5 hover:border-gold-muted hover:bg-gold-muted/10 transition-all duration-300 w-full md:w-auto min-w-[300px]"
-                    >
-                        <Phone className="w-12 h-12 text-stone-light group-hover:text-gold-muted mb-6 transition-colors" />
-                        <span className="text-3xl md:text-4xl font-black text-white tracking-widest group-hover:text-gold-muted transition-colors">
-                            0540 850 69 41
-                        </span>
-                        <span className="text-stone-accent text-xs mt-2 uppercase tracking-wider">Operasyon / Lojistik</span>
+                        <span className="text-stone-accent text-sm mt-4 uppercase tracking-wider">HARMANDAOĞLU AŞ</span>
                     </a>
                 </div>
 
